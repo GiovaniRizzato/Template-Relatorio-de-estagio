@@ -1,0 +1,92 @@
+\documentclass[12pt]{FormasABNT/abnt-UTFPR}
+
+\usepackage[utf8]{inputenc}
+\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm]{FormasABNT/abntcite}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{float}
+\usepackage[top=3cm,left=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{indentfirst}
+\usepackage[center,small,sc]{caption}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+\renewcommand*\rmdefault{cm}
+\usepackage{listings}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{subfigure}
+
+
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\newcommand{\var}{\underline{{X}}' = [\begin{array}{cccc} X_1 & X_2 & \cdots & X_p \end{array} ]}
+\newcommand{\med}{\underline{{\mu}}' = [\begin{array}{cccc} \mu_1 & \mu_2 & \cdots & \mu_p \end{array} ]}
+\newcommand{\cov}{{\Sigma}_{p\times p}}
+\newcommand{\vari}{{\rm V}}
+\newcommand{\covar}{{\rm Cov}}
+\newcommand{\negrito}[1]{\boldsymbol{#1}}
+\newcommand{\reg}[1]{#1$^{\circledR}$}
+\newcommand{\citec}[1]{\citeauthor{#1} (\citeyear{#1})}
+
+\setcounter{footnote}{0}
+\renewcommand{\thefigure}{\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{\arabic{table}}
+\setcounter{table}{0}
+
+\hyphenation{vi-si-bi-li-da-de}
+\hyphenation{uni-di-men-sio-nal}
+\hyphenation{con-ges-tio-na-men-tos}
+\def\ds{\displaystyle} 
+
+\begin{document}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  stringstyle=\color{verde},
+  commentstyle=\color{red},
+  extendedchars=true,
+  showspaces=false,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  breakautoindent=true,
+  captionpos=b,
+  xleftmargin=0pt,
+}
+
+\input Apresentacao/capa
+\input Apresentacao/folharosto
+\input Apresentacao/resumo
+
+\listadefiguras
+\listadetabelas
+\sumario
+
+\doublespacing
+
+\input introducao
+\input empresa
+\input atividades
+\input conclusao
+
+\bibliography{Referencias} 
+\bibliographystyle{abntex2-alf.bst}
+
+\end{document}
